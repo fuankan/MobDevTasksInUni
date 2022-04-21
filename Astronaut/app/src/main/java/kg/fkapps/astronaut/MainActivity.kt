@@ -21,9 +21,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun init() {
-        var sendWishes: Button = findViewById(R.id.buttonSendWishes)
-        var sendWishes2: Button = findViewById(R.id.buttonSendWishes2)
-        var wishesText: EditText = findViewById(R.id.editTextTextWishes)
+        val sendWishes: Button = findViewById(R.id.buttonSendWishes)
+        val sendWishes2: Button = findViewById(R.id.buttonSendWishes2)
+        val wishesText: EditText = findViewById(R.id.editTextTextWishes)
         sendWishes.visibility = View.VISIBLE
         sendWishes2.visibility = View.GONE
         wishesText.visibility = View.GONE
