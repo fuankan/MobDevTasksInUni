@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_shade_1"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:id="@+id/idPBLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/idRLHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/idIVBlack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@color/black_shade_1" />
+
+        <TextView
+            android:id="@+id/idTVCityName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="City name"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/idLLEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idTVCityName"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/idTILCity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="4.5"
+                android:background="@android:color/transparent"
+                android:hint="Enter City Name"
+                android:padding="5dp"
+                android:textColorHint="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/idEditCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/idIVSearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_search"
+                app:tint="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/idTVTemperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idLLEdit"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="20"
+            android:textColor="@color/white"
+            android:textSize="70sp" />
+
+        <ImageView
+            android:id="@+id/idIVIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idTVTemperature"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/idTVCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idIVIcon"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="Condition"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/idTVCondition"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="50dp"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent">
+
+                    <TextView
+                        android:id="@+id/idTVSpace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/idIVCondition"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/idTVSpace"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="5dp"
+                        android:background="@color/white"
+                        android:padding="4dp"
+                        android:src="@drawable/daytime" />
+
+                    <TextView
+                        android:id="@+id/idTVSunrise"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idIVCondition"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="80"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="50dp"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent">
+
+                    <TextView
+                        android:id="@+id/idTVSpace2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/idIVCondition2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/idTVSpace2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/white"
+                        android:padding="4dp"
+                        android:src="@drawable/sunset" />
+
+                    <TextView
+                        android:id="@+id/idTVSunset"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idIVCondition2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="80"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
