@@ -75,9 +75,9 @@ public class MainActivity extends AppCompatActivity {
         sunriseTV = findViewById(R.id.idTVSunrise);
         sunsetTV = findViewById(R.id.idTVSunset);
 
-        /*weatherModelRVArrayList = new ArrayList<>();
+        /* weatherModelRVArrayList = new ArrayList<>();
         weatherAdapterRV = new WeatherAdapterRV(this, weatherModelRVArrayList);
-        weatherRV.setAdapter(weatherAdapterRV);*/
+        weatherRV.setAdapter(weatherAdapterRV); */
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
